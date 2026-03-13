@@ -1,0 +1,40 @@
+Sistema de Controle de Chaves para aluguel de Chalés - Administrador, Operador e Usuário
+
+
+O sistema deve gerir o empréstimo de chaves, garantindo o rastreio de cópias, prazos de devolução e notificação de atraso. 
+
+Tem que ter:
+
+1. Cadastrar salas com classificação de exclusivas ou comunitárias, e deve ser possível registrar chaves que dão acesso a múltiplos ambientes. 
+Por exemplo, a chave mestra ou chave do portão principal. Ao solicitar a sala X, o sistema deve sugerir a retirada
+da chave do prédio Y (caso precise abrir o prédio, por exemplo).
+
+2. Gestão de inventário: Controle do número de cópias disponíveis pra cada sala, e cada cópia deve ter um ID (como numeração física).
+
+3. Cadastrar pessoas autorizadas a retirar chaves, incluindo dados de contato como e-mail para notificações.
+
+4. Fluxo do empréstimo de chaves: Registrar a retirado vinculando uma pessoa uma cópia, definir data/hora prevista para a devolução, 
+permitir que uma pessoa retire várias salas ao mesmo tempo e adicionar um status para a chave (disponível, emprestada, reservada, manutenção e perdida).
+
+5. Reservas: uma chave pode ter várias reservas futuras, e uma reserva pode envolver várias chaves. 
+
+Notificações: O sistema deve possuir uma rotina para enviar e-mails de alerta para usuários com chaves atrasadas.
+
+Diagrama: composição, agregação e herança, um de cada no mínimo.
+
+O sistema deve ter crud para todas as tabelas, consultas com filtro pra ver informações cadastradas e informações no sistema, 
+envio de e-mail com a notificação de prazo de entrega de chaves
+
+- Controle de autenticação e autorização de usuários. O acesso ao sistema
+deve ser restrito a usuários autenticados (login/senha). Deve haver diferentes
+níveis de acesso (ex: Administrador, Operador e Usuário). 
+
+Regras de negócio: 
+
+1. Uma cópia de chave "Emprestada" não pode ser atribuída a outra pessoa até que
+seja dada a baixa no sistema.
+
+2. O histórico de movimentações deve ser preservado mesmo após a devolução da
+chave.
+
+3. Uma chave exige renovação mensal, haja vista que, em casos de atraso, há uma multa.
