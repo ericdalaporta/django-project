@@ -38,3 +38,7 @@ seja dada a baixa no sistema.
 chave.
 
 3. Uma chave exige renovação mensal, haja vista que, em casos de atraso, há uma multa.
+
+4. Apenas chaves disponíveis podem ser emprestadas
+
+5. Não pode haver conflito de reservas
